@@ -501,7 +501,7 @@ import java.util.concurrent.atomic.AtomicReference;
                     }
                 }
 
-                // (1)、获取是否开启缓存标识以及获取cacheKey,cacheKey默认为null
+                // (1)、获取是否开启缓存标识以及获取cacheKey,cacheKey默认为null需要重写
                 final boolean requestCacheEnabled = isRequestCachingEnabled();
                 final String cacheKey = getCacheKey();
 

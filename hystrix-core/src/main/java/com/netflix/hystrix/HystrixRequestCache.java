@@ -65,6 +65,13 @@ public class HystrixRequestCache {
         this.concurrencyStrategy = concurrencyStrategy;
     }
 
+    /**
+     * 初始化入口
+     * {@link com.netflix.hystrix.AbstractCommand#AbstractCommand}
+     * @param key
+     * @param concurrencyStrategy
+     * @return
+     */
     public static HystrixRequestCache getInstance(HystrixCommandKey key, HystrixConcurrencyStrategy concurrencyStrategy) {
         return getInstance(new RequestCacheKey(key, concurrencyStrategy), concurrencyStrategy);
     }
